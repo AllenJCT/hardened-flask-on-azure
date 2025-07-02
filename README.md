@@ -36,6 +36,20 @@ Shows resource group, size, public IP, OS, and networking setup.
 
 
 
+### SSH Hardening  
+Secure shell is fully enabled and actively monitored, ensuring secure remote access to the VM.
+
+![SSH Status](./SSH%20Hardening.PNG)
+
+
+
+### Firewall Rules via UFW  
+Only ports 22 (SSH) and 5000 (Flask app) are open to the public.
+
+![UFW](./UFW%20Status.PNG)
+
+
+
 ### Fail2Ban & Unattended Security Updates  
 Fail2Ban monitors auth logs and blocks brute-force SSH attempts. Automatic security patches are installed via `unattended-upgrades`.
 
@@ -47,20 +61,6 @@ Fail2Ban monitors auth logs and blocks brute-force SSH attempts. Automatic secur
 The Flask app is deployed with Gunicorn and managed via `systemd` to survive restarts and shutdowns.
 
 ![FlaskApp Service](./FlaskApp%20Live.PNG)
-
-
-
-### Firewall Rules via UFW  
-Only ports 22 (SSH) and 5000 (Flask app) are open to the public.
-
-![UFW](./UFW%20Status.PNG)
-
-
-
-### SSH Hardening  
-Secure shell is fully enabled and actively monitored, ensuring secure remote access to the VM.
-
-![SSH Status](./SSH%20Hardening.PNG)
 
 
 
